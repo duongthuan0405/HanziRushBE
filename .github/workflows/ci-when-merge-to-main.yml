@@ -2,7 +2,7 @@ name: CI when have new code merge to main
 
 on:
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build-and-test:

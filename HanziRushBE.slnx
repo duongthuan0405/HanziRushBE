@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="HanziRush.Api/HanziRush.Api.csproj" />
+  <Project Path="HanziRush.Application/HanziRush.Application.csproj" />
+  <Project Path="HanziRush.Domain/HanziRush.Domain.csproj" />
+  <Project Path="HanziRush.Infrastructure/HanziRush.Infrastructure.csproj" />
+</Solution>

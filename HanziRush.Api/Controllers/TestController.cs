@@ -4,7 +4,7 @@ namespace HanziRush.Api.Controllers;
 
 public class ResultDTO<T>
 {
-    public bool IsSuccess {get; set;} = default;
+    public bool IsSuccess {get; set;} = true;
     public string Message {get; set;} = string.Empty;
     public T? Data {get; set; } = default(T);
 
@@ -23,5 +23,6 @@ public class TestController : ControllerBase
             Data = "Ok!"
         };
         return Task.FromResult<ActionResult<ResultDTO<string>>>(Ok(res));
+
     }
 }

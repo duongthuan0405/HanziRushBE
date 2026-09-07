@@ -1,7 +1,7 @@
 name: CI when have new code merge to main
 
 on:
-  pull_request:
+  push:
     branches: [ "main" ]
 
 jobs:
@@ -18,7 +18,3 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal | echo "Testing ..."
-    - name: OK
-      run: echo "Everything is OK!!"

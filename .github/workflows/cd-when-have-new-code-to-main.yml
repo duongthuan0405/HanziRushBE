@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  pull-code-build-image-run-containers:
     runs-on: ubuntu-latest
     environment: cd
 
@@ -25,3 +25,5 @@ jobs:
           docker build -t ${{ vars.APP_NAME }}:${{ github.sha }} -f ./Docker/Dockerfile .
 
           docker tag ${{ vars.APP_NAME }}:${{ github.sha }} ${{ vars.APP_NAME }}:latest
+
+          docker run -p 80:8000 ${{ vars.APP_NAME }}:${{ github.sha }} ${{ vars.APP_NAME }}:latest

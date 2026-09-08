@@ -10,13 +10,15 @@ public class ResultDTO<T>
 
 }
 
+[Route("api/test")]
+[ApiController]
 public class TestController : ControllerBase
 {
-    [HttpGet]
+    [HttpGet("ci")]
     public Task<ActionResult<ResultDTO<string>>> TestCI()
     {
 
-        var res = new ResultDTO<string>()
+        var res = new ResultDTO<string>
         {
             IsSuccess = true,
             Message = "Test CI OK",

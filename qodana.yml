@@ -1,0 +1,8 @@
+version: "1.0"
+
+dotnet:
+  solution: "HanziRushBE.slnx"
+
+bootstrap: |
+  dotnet restore "HanziRushBE.slnx"
+  dotnet build "HanziRushBE.slnx" --no-restore

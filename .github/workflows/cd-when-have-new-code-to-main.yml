@@ -26,4 +26,4 @@ jobs:
 
           docker tag ${{ vars.APP_NAME }}:${{ github.sha }} ${{ vars.APP_NAME }}:latest
 
-          docker run -p 80:8000 -d ${{ vars.APP_NAME }}:${{ github.sha }} ${{ vars.APP_NAME }}:latest
+          docker run -p 80:8000 -d ${{ vars.APP_NAME }}:latest

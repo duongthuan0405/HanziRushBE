@@ -25,5 +25,7 @@ jobs:
           docker build -t ${{ vars.APP_NAME }}:${{ github.sha }} -f ./Docker/Dockerfile .
 
           docker tag ${{ vars.APP_NAME }}:${{ github.sha }} ${{ vars.APP_NAME }}:latest
-
-          docker run -p 80:8000 -d ${{ vars.APP_NAME }}:latest
+          
+          docker stop ${{vars.APP_NAME}}
+          docker rm ${{vars.APP_NAME}}
+          docker run -p 80:8000 -d ${{ vars.APP_NAME }}:latest --name ${{vars.APP_NAME}}

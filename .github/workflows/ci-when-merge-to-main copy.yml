@@ -44,4 +44,4 @@ jobs:
                   --linter qodana-dotnet
                   --within-docker true
           env:
-              QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+              QODANA_TOKEN: https://github.com/duongthuan0405/HanziRushBE.githttps://github.com/duongthuan0405/HanziRushBE.git
